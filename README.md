@@ -30,10 +30,14 @@ This will create a virtul copter at specified coordinates which is also my Home 
 Vehicle is created at TCp port 5670
 
 MAVProxy is a fully-functioning GCS for UAV's. The intent is for a minimalist, portable and extendable GCS for any UAV supporting the MAVLink protocol (such as the APM).
-A complete windows installer for MAVProxy is available at http://firmware.ardupilot.org/Tools/MAVProxy/.
+
+A complete windows installer for MAVProxy is available at 
+http://firmware.ardupilot.org/Tools/MAVProxy/.
 
 Goto MavProxy root directory and run the following command
+
 `<mavproxy.exe --master tcp:127.0.0.1:5760 --out 127.0.0.1:14550>` 
+
 This will port the the vehicle from port 5670 to a UDP port 14550 , which then can be connected to Mission Planner for further
 analysis
 ![](https://user-images.githubusercontent.com/10976047/51426482-cbaeb600-1beb-11e9-9c50-44e15b101bce.PNG)
@@ -57,8 +61,11 @@ Now the drone is ready to fly. goto SITL/Simple_Go_To.py and execute the script.
 ![](https://user-images.githubusercontent.com/10976047/51426729-ee8e9980-1bee-11e9-92fa-ce0c08a6960e.png)
 ![](https://user-images.githubusercontent.com/10976047/51426730-ef273000-1bee-11e9-894f-753367052204.png)
 
-The complete set of Python commands, instructions can be found on http://python.dronekit.io/develop/best_practice.html
-Follow examples on http://python.dronekit.io/examples/running_examples.html
+The complete set of Python commands, instructions can be found on 
+http://python.dronekit.io/develop/best_practice.html
+
+Follow examples on 
+http://python.dronekit.io/examples/running_examples.html
 
 Hope this gives an idea on SITL. 
 
