@@ -1,4 +1,5 @@
 # CivilDrones
+## Software In The Loop
 #### The SITL (software in the loop) simulator allows you to run Plane, Copter or Rover without any hardware. It is a build of the autopilot code using an ordinary C++ compiler, giving you a native executable that allows you to test the behaviour of the code without hardware.It takes advantage of the fact that ArduPilot is a portable autopilot that can run on a very wide variety of platforms.
 
 *This article provides an overview of SITL’s benefits and architecture.*
@@ -67,6 +68,46 @@ http://python.dronekit.io/develop/best_practice.html
 Follow examples on 
 http://python.dronekit.io/examples/running_examples.html
 
-Hope this gives an idea on SITL. 
+
+## Hardware In The Loop 
+
+#### Hardware-in-the-Loop (HITL or HIL) is a simulation mode in which normal PX4 firmware is run on real flight controller hardware. This approach has the benefit of testing most of the actual flight code on the real hardware.
+
+###### HITL Architecture
+
+![] (https://user-images.githubusercontent.com/23422449/51610645-88bb4e00-1f1d-11e9-9090-d170b7585e24.png)
+
+###### jMAVSim
+
+jMAVSim is a simple multirotor/Quad simulator that allows you to fly copter type vehicles running PX4 around a simulated world. It is easy to set up and can be used to test that your vehicle can take off, fly, land, and responds appropriately to various fail conditions (e.g. GPS failure).
+
+Clone and setup jMAVSim.
+
+The installation steps are explaied in [jMAVSim](https://github.com/PX4/jMAVSim), which is very simple to 
+follow.
+
+After the installation connect your flight controller via USB and note the port name from 'Device Manager'.
+
+On Windows, to run the simulator use the below code:
+
+`<java -cp lib/*;out/production/jmavsim.jar me.drton.jmavsim.Simulator -serial COM9 9600 -qgc -m>` 
+
+COM9 9600 - this is the option to mention the method to connect to Flight conroller via USB
+qgc - Forward message packets to QGC via UDP at 127.0.0.1:14550
+
+Once the simulator is up below window opens and starts sending MAVLink messages.
+
+![] (https://user-images.githubusercontent.com/23422449/51617767-3aae4680-1f2d-11e9-950f-dcc3e0c3194c.png)
+
+
+Open Q-ground Control or Mission Planner. This automatically connects the simulated drone and displays in the application.
+
+![] (https://user-images.githubusercontent.com/23422449/51619144-fa9c9300-1f2f-11e9-8834-465f9161829d.png)
+
+This lets you check if the hardware components are funtioning properly.
+
+By connecting RC you can simulate flying the drone in the simulated world.
+
+Hope this gives an idea on SITL and HITL
 
 Happy flying!! :airplane: :thumbsup:
