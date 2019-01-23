@@ -75,7 +75,7 @@ http://python.dronekit.io/examples/running_examples.html
 
 ###### HITL Architecture
 
-![] (https://user-images.githubusercontent.com/23422449/51610645-88bb4e00-1f1d-11e9-9090-d170b7585e24.png)
+![](https://user-images.githubusercontent.com/23422449/51610645-88bb4e00-1f1d-11e9-9090-d170b7585e24.png)
 
 ###### jMAVSim
 
@@ -97,12 +97,12 @@ qgc - Forward message packets to QGC via UDP at 127.0.0.1:14550
 
 Once the simulator is up below window opens and starts sending MAVLink messages.
 
-![] (https://user-images.githubusercontent.com/23422449/51617767-3aae4680-1f2d-11e9-950f-dcc3e0c3194c.png)
+![](https://user-images.githubusercontent.com/23422449/51617767-3aae4680-1f2d-11e9-950f-dcc3e0c3194c.png)
 
 
 Open Q-ground Control or Mission Planner. This automatically connects the simulated drone and displays in the application.
 
-![] (https://user-images.githubusercontent.com/23422449/51619144-fa9c9300-1f2f-11e9-8834-465f9161829d.png)
+![](https://user-images.githubusercontent.com/23422449/51619144-fa9c9300-1f2f-11e9-8834-465f9161829d.png)
 
 This lets you check if the hardware components are funtioning properly.
 
