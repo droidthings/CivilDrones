@@ -97,7 +97,7 @@ qgc - Forward message packets to QGC via UDP at 127.0.0.1:14550
 
 Once the simulator is up below window opens and starts sending MAVLink messages.
 
-![](https://user-images.githubusercontent.com/23422449/51617767-3aae4680-1f2d-11e9-950f-dcc3e0c3194c.png)
+![](https://user-images.githubusercontent.com/23422449/51621456-dd1df800-1f34-11e9-8d6c-ffbc17f9f041.png)
 
 
 Open Q-ground Control or Mission Planner. This automatically connects the simulated drone and displays in the application.
