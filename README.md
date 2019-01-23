@@ -104,7 +104,7 @@ Open Q-ground Control or Mission Planner. This automatically connects the simula
 
 ![](https://user-images.githubusercontent.com/23422449/51619144-fa9c9300-1f2f-11e9-8834-465f9161829d.png)
 
-This lets you check if the hardware components are funtioning properly.
+This lets you check if the hardware components like GPS are funtioning properly.
 
 By connecting RC you can simulate flying the drone in the simulated world.
 
