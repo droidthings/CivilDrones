@@ -1,8 +1,9 @@
 # CivilDrones
-## Software In The Loop
+## Architecture
+### Software In The Loop
 #### The SITL (software in the loop) simulator allows you to run Plane, Copter or Rover without any hardware. It is a build of the autopilot code using an ordinary C++ compiler, giving you a native executable that allows you to test the behaviour of the code without hardware.It takes advantage of the fact that ArduPilot is a portable autopilot that can run on a very wide variety of platforms.
 
-*This article provides an overview of SITL’s benefits and architecture.*
+*This article provides an overview of SITL and HIL's benefits and architecture.*
 
 ###### SITL Architecture
 Note in the image below the port numbers are indicative only and can vary depending on your environment.
@@ -11,10 +12,29 @@ Note in the image below the port numbers are indicative only and can vary depend
 
 DroneKit-SITL is the simplest, fastest and easiest way to run SITL on Windows, Linux (x86 architecture only), or Mac OS X. It is installed from Python’s pip tool on all platforms, and works by downloading and running pre-built vehicle binaries that are appropriate for the host operating system.
 
+### Hardware In The Loop 
+
+#### Hardware-in-the-Loop (HITL or HIL) is a simulation mode in which normal PX4 firmware is run on real flight controller hardware. This approach has the benefit of testing most of the actual flight code on the real hardware.
+
+![](https://user-images.githubusercontent.com/23422449/51610645-88bb4e00-1f1d-11e9-9090-d170b7585e24.png)
+
+## Installation - DRONEKIT-SITL
+
 Install DroneKit on windows using `<pip install dronekit-sitl>` 
 
 The complete instruction is explaied on [DroneKit-SITL](http://python.dronekit.io/develop/sitl_setup.html). Which is very simple to 
 follow.
+
+## Installation - HIL jMAVSim
+
+jMAVSim is a simple multirotor/Quad simulator that allows you to fly copter type vehicles running PX4 around a simulated world. It is easy to set up and can be used to test that your vehicle can take off, fly, land, and responds appropriately to various fail conditions (e.g. GPS failure).
+
+Clone and setup jMAVSim.
+
+The installation steps are explaied in [jMAVSim](https://github.com/PX4/jMAVSim), which is very simple to 
+follow.
+
+## Process flow - SITL
 
 After the installation connect your flight controller via USB and run the the python script SITL/DroneKit_Simulator.py to get all the vehicle attributes, which might look like below image
 
@@ -68,23 +88,7 @@ http://python.dronekit.io/develop/best_practice.html
 Follow examples on 
 http://python.dronekit.io/examples/running_examples.html
 
-
-## Hardware In The Loop 
-
-#### Hardware-in-the-Loop (HITL or HIL) is a simulation mode in which normal PX4 firmware is run on real flight controller hardware. This approach has the benefit of testing most of the actual flight code on the real hardware.
-
-###### HITL Architecture
-
-![](https://user-images.githubusercontent.com/23422449/51610645-88bb4e00-1f1d-11e9-9090-d170b7585e24.png)
-
-###### jMAVSim
-
-jMAVSim is a simple multirotor/Quad simulator that allows you to fly copter type vehicles running PX4 around a simulated world. It is easy to set up and can be used to test that your vehicle can take off, fly, land, and responds appropriately to various fail conditions (e.g. GPS failure).
-
-Clone and setup jMAVSim.
-
-The installation steps are explaied in [jMAVSim](https://github.com/PX4/jMAVSim), which is very simple to 
-follow.
+## Process flow - HIL
 
 After the installation connect your flight controller via USB and note the port name from 'Device Manager'.
 
